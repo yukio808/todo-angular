@@ -13,6 +13,11 @@ angular
           completed : false
       });
     };
+    $scope.enter_saves = function($event){
+      if($event.keycode == 13){
+        $scope.save_todo( $scope.new_todo);
+      }
+    };
     
     $scope.todos = [
       { 
