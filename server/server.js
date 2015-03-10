@@ -6,6 +6,7 @@ mongoose.connect('mongodb://localhost/angulartodo');
 
 app.use(express.static(__dirname + './../public'));
 app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 app.use('/api', require('./controllers/api'));
 
 app.get('/', function (req, res) {
