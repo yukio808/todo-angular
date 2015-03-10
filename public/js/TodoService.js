@@ -18,4 +18,7 @@ angular
     this.uncomplete = function (todo_id){
       return $http.put('/api/' + todo_id + '/uncomplete');
     };
+    this.delete = function (todo_id){
+      return $http.delete('/api/' + todo_id);
+    };
   }]);

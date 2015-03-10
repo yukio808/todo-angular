@@ -30,6 +30,10 @@ angular
         TodoService.uncomplete(todo_id);
       }
     };
-    
+    $scope.delete = function (todo) {
+      console.log(todo);
+      $scope.todos.splice($scope.todos.indexOf(todo), 1);
+      TodoService.delete(todo._id);
+    };
   }]);
 
